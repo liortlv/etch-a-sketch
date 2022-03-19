@@ -1,8 +1,6 @@
-.container {
+.board {
+    width: 600px;
+    height: 600px;
     display: grid;
     gap: 2px;
-}
-
-.cell {
-    background-color: rgb(209, 183, 183);0
 }

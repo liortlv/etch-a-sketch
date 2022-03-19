@@ -11,7 +11,25 @@
 </head>
 
 <body>
-    <div class="container"></div>
+    <div class="flex-container">
+        <div class="title">
+            <h1>Etech A Sketch</h1>
+        </div>
+        <div class="container">
+            <div class="board"></div>
+            <div class="buttons">
+                <button>Blue</button>
+                <button>Black</button>
+                <button>White</button>
+                <button>Random</button>
+                <button>Clear Board</button>
+            </div>
+            <div>
+                <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)">
+                <button>Set Size</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
