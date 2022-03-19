@@ -1,31 +1,33 @@
-let color = "rgb(100, 148, 202)";
+let color = "rgb(100, 148, 202)"; // initial color when mouseover
+populateBoard(16);
 
+// Populate the board with nxn (gridSize x gridSize) squares
 function populateBoard(gridSize) {
     let board = document.querySelector(".board");
     let squares = board.querySelectorAll("div");
     squares.forEach((div) => div.remove());
+
     board.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
     board.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
 
-    let amount = gridSize * gridSize;
-    for (let i = 0; i < amount; i++) {
+    for (let i = 0; i < gridSize * gridSize; i++) {
         let square = document.createElement("div");
         square.addEventListener("mouseover", colorSquare);
         square.style.backgroundColor = "rgb(209, 183, 183)";
-        board.appendChild(square);  /// if does not work try: board.insertAdjacentElemnent("beforeend, square");
+        board.appendChild(square);
     }
 }
 
-populateBoard(16);
-
-function changeSize(input) {
-    if (input >= 2 && input <= 100) {
-        populateBoard(input);
+// Called when user change the board size input
+function changeBoardSize(userInput) {
+    if (userInput >= 2 && userInput <= 100) {
+        populateBoard(userInput);
     } else {
         alert("Please enter number betwee 2-100!");
     }
 }
 
+// Called when mouseover to change the current object color
 function colorSquare() {
     if (color == 'random') {
         this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
@@ -34,10 +36,12 @@ function colorSquare() {
     }
 }
 
+// Called when user clicked a color change button
 function changeColor(userChoice) {
     color = userChoice;
 }
 
+// Resets the board to the initial color
 function resetBoard() {
     let board = document.querySelector(".board");
     let squares = board.querySelectorAll("div");

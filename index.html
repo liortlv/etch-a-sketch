@@ -15,18 +15,18 @@
         <div class="title">
             <h1>Etech A Sketch</h1>
         </div>
-        <div class="container">
+        <div class="content">
             <div class="board"></div>
             <div class="buttons">
-                <button onclick="changeColor('rgb(100, 148, 202)')">Blue</button>
-                <button onclick="changeColor('black')">Black</button>
-                <button onclick="changeColor('rgb(209, 183, 183)')">Eraser</button>
-                <button onclick="changeColor('random')">Random</button>
-                <button onclick="resetBoard()">Clear Board</button>
+                <button class="blue-button" onclick="changeColor('rgb(100, 148, 202)')">Blue</button>
+                <button class="black-button" onclick="changeColor('black')">Black</button>
+                <button class="eraser-button" onclick="changeColor('rgb(209, 183, 183)')">Eraser</button>
+                <button class="random-button" onclick="changeColor('random')">Random</button>
+                <button class="clear-button" onclick="resetBoard()">Clear Board</button>
             </div>
             <div>
-                <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)">
-                <button>Set Size</button>
+                <input type="text" placeholder="Size of Board" value="16" onchange="changeBoardSize(this.value)">
+                <button class="setsize-button">Set Size</button>
             </div>
         </div>
     </div>

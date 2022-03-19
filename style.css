@@ -1,6 +1,112 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    background: linear-gradient(rgb(255, 255, 255), rgb(255, 234, 209));
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.title {
+    font-size: 30px;
+    margin: 12px;
+    font-family: Brush Script MT, Helvetica, sans-serif;
+}
+
 .board {
-    width: 600px;
-    height: 600px;
+    width: 660px;
+    height: 660px;
     display: grid;
     gap: 1.5px;
+    box-shadow: 1px 1px 22px 3px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    padding: 4px 14px;
+    margin: 4px;
+    font-size: 16px;
+    border-radius: 2em;
+}
+
+.buttons {
+    margin: 16px;
+}
+
+.blue-button{
+    background-color: rgb(100, 148, 202);
+    color: aliceblue;
+}
+
+.blue-button:hover {
+    background-color: aliceblue;
+    color: rgb(100, 148, 202);
+}
+
+.black-button {
+    background-color: black;
+    color: aliceblue;
+}
+
+.black-button:hover {
+    background-color: aliceblue;
+    color: black;
+  }
+
+.eraser-button {
+    background-color: rgb(209, 183, 183);
+}
+
+.eraser-button:hover {
+    background-color: aliceblue;
+    color:  rgb(209, 183, 183);
+}
+
+
+.random-button {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%
+    );
+    color: black;
+    font-weight: 900;
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-stroke-color: aliceblue;
+}
+
+.random-button:hover {
+    background: aliceblue;
+}
+
+.clear-button:hover,
+.setsize-button:hover {
+    background-color: rgb(205, 255, 200);
+}
+
+input {
+    width: 80px;
+    text-align: center;
+    border-radius: 4px;
 }
