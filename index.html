@@ -18,11 +18,11 @@
         <div class="container">
             <div class="board"></div>
             <div class="buttons">
-                <button>Blue</button>
-                <button>Black</button>
-                <button>White</button>
-                <button>Random</button>
-                <button>Clear Board</button>
+                <button onclick="changeColor('rgb(100, 148, 202)')">Blue</button>
+                <button onclick="changeColor('black')">Black</button>
+                <button onclick="changeColor('rgb(209, 183, 183)')">Eraser</button>
+                <button onclick="changeColor('random')">Random</button>
+                <button onclick="resetBoard()">Clear Board</button>
             </div>
             <div>
                 <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)">

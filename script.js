@@ -1,3 +1,5 @@
+let color = "rgb(100, 148, 202)";
+
 function populateBoard(gridSize) {
     let board = document.querySelector(".board");
     let squares = board.querySelectorAll("div");
@@ -25,5 +27,19 @@ function changeSize(input) {
 }
 
 function colorSquare() {
-    this.style.backgroundColor = "rgb(100, 148, 202)";
+    if (color == 'random') {
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    } else {
+        this.style.backgroundColor = color;
+    }
+}
+
+function changeColor(userChoice) {
+    color = userChoice;
+}
+
+function resetBoard() {
+    let board = document.querySelector(".board");
+    let squares = board.querySelectorAll("div");
+    squares.forEach((div) => div.style.backgroundColor = "rgb(209, 183, 183)");
 }
